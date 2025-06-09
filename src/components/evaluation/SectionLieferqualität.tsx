@@ -14,6 +14,9 @@ export const SectionLieferqualität = () => {
   return (
     <div className="space-y-2">
       <h2 className="text-xl font-semibold mb-2">Lieferqualität</h2>
+      <p className="text-sm text-gray-600 mt-2">
+  Aktuelle Punktzahl: {data.lieferqualität} / 100
+</p>
       {options.map((option) => (
         <label key={option.value} className="block">
           <input

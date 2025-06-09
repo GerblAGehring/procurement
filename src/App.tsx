@@ -1,18 +1,19 @@
-import { Header } from './components/layout/Header';
-import { Container } from './components/layout/Container';
-import { EvaluationPage } from './pages/EvaluationPage';
-
+import { Routes, Route } from 'react-router-dom';
+import { AppLayout } from './components/navigation/AppLayout';
+import { HomePage } from './pages/HomePage';
+import { DashboardPage } from './pages/DashboardPage';
+import  EvaluationPage  from './pages/EvaluationPage';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Container>
-        <EvaluationPage />
-      </Container>
-    </>
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="dashboard" element={<DashboardPage />} />
+        <Route path="bewertung" element={<EvaluationPage />} />
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
-
